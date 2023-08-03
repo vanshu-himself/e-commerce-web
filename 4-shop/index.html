@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeShop. Shopping</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./shop-style.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="header-div">
+            <div class="left">MeShop.</div>
+            <div class="right">
+                <ul type="none">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">SignUp</a></li>
+                    <li><a href="../5-cart/index.html">My Cart</a></li>
+                    <div id="count-badge"></div>
+                    <li><a href="../3-profile/index.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="kebab">
+              <a href="../5-cart/index.html" style="font-size: 13px;">My Cart</a>
+              <button id="kebeb-bar"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+          </div>
+        </div>
+        <div class="menu" id="menu">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Login</a></div>
+          <div><a href="#">SignUp</a></div>
+          <div><a href="../5-cart/index.html">My Cart</a></div>
+          <div><a href="../3-profile/index.html">Profile</a></div>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <h2 style="text-align: center;">Filters</h2>
+        <section>
+          <title>Colors</title>
+          <ul>
+            <li>
+              <input id="red" type="checkbox" name="color" />
+              <label for="red">Red</label>
+            </li>
+            <li>
+              <input id="blue" type="checkbox" name="color" />
+              <label for="blue">Blue</label>
+            </li>
+            <li>
+              <input id="green" type="checkbox" name="color" />
+              <label for="green">Green</label>
+            </li>
+            <li>
+              <input id="black" type="checkbox" name="color" />
+              <label for="black">Black</label>
+            </li>
+            <li>
+              <input id="white" type="checkbox" name="color" />
+              <label for="white">White</label>
+            </li>
+          </ul>
+        </section>
+        <div class="apply-btn">
+          <button onclick="colorResult()" id="apply-filter">Apply Filter</button>
+      </div>
+        
+        <section>
+          <title>Rating</title>
+          <input onchange="rangeResult()" type="range" min="0" max="5" name="rating" id="ratings">
+        
+        </section>
+        <section>
+          <title>Price Range</title>
+          <ul>
+            <li>
+              <input class="pricecheck" value="0-25" id="0-25" type="checkbox" name="prange" />
+              <label for="0-25">$0 to $25</label>
+            </li>
+            <li>
+              <input class="pricecheck" value="25-50" id="25-50" type="checkbox" name="prange" />
+              <label for="25-50">$25 to $50</label>
+            </li>
+            <li>
+              <input class="pricecheck" value="50-100" id="50-100" type="checkbox" name="prange" />
+              <label for="50-100">$50 to $100</label>
+            </li>
+            <li>
+              <input class="pricecheck" value="100-9999" id="100on" type="checkbox" name="prange" />
+              <label for="100on">$100 onwards</label>
+            </li>
+          </ul>
+        </section>
+        <div class="apply-btn">
+            <button onclick="priceResult()" id="apply-filter">Apply Filter</button>
+        </div>
+      </aside>
+      <main-content>
+        <div class="input">
+            <input id="search"  oninput="searchResult()" type="search" placeholder="Search" />
+        </div>
+        <div class="filters">
+            <button id="all-btn">All</button>
+            <button id="men-btn">Mens</button>
+            <button id="women-btn">Womens</button>
+            <button id="jewellery-btn">Jewelery</button>
+            <button id="electronics-btn">Electronics</button>
+        </div>
+        
+        <!-- ITEMS-WISE CONTAINERs -->
+        <div id="itemContainer"  class="items-container">
+
+        </div>
+
+        <!-- MEN's CONTANIER -->
+        <h2 id="h2-mens" style="padding-bottom: 20px;">Men's Clothing</h2>
+        <div class="items-container" id="mens-container">
+          
+          <!-- =================================== -->
+        </div>
+        
+        <!-- WOMEN's CONTANIER -->
+        <h2 id="h2-womens" style="padding: 20px 0px;">Womens' Clothing</h2>
+        <div class="items-container" id="womens-container"></div>
+       
+        <!-- JEWELERY CONTANIER -->
+        <h2 id="h2-jewelery" style="padding: 20px 0px;">Jewelery</h2>
+        <div class="items-container" id="jewelery-container"></div>
+       
+        <!-- ELECTRONICS CONTANIER -->
+        <h2 id="h2-electronics" style="padding: 20px 0px;">Electronics</h2>
+        <div class="items-container" id="electronics-container"></div>
+
+    </main-content>
+    </main>
+
+    <script src="./shop-script.js">console.clear();</script>
+  </body>
+</html>
